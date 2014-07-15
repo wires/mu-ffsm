@@ -37,8 +37,8 @@ state of type `S`. We then consider three types of
 functions on it:
 
 - entry : `* ⟶ S`
-- transition : `* ⟶ S ⟶ S`
-- exit : `* ⟶ S ⟶ *`
+- transition : `S ⟶ * ⟶ S`
+- exit : `S ⟶ * ⟶ *`
 
 We write the entry function as `0`, the exit function as `1` and then
 name all the transition functions however we like. 

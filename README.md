@@ -32,8 +32,8 @@ console.log(cowboyGreeting(', ...'));
 
 ## Idea
 
-We consider a special 'state machine' that maintains an internal
-state of type `S`. We then consider three classes of
+We consider a sort of 'state machine' that maintains an internal
+state of type `S`. We then consider three types of
 functions on it:
 
 - entry : `* ⟶ S`

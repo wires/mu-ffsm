@@ -1,11 +1,11 @@
 {
-  "name": "ffsm",
-  "version": "0.0.1",
+  "name": "mu-ffsm",
+  "version": "0.0.2",
   "description": "Fluent functional state machines",
-  "main": "ffsm.js",
+  "main": "µ-ffsm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jelle 'wires' Herold <jelle@defekt.nl>",
   "license": "ISC"
 }

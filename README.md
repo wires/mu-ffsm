@@ -2,11 +2,11 @@
 
 Very tiny helper function to construct fluent interfaces.
 
-	> npm i µ-ffsm
+	> npm i mu-ffsm
 	
 Import
 
-	var FFSM = require('µ-ffsm');
+	var FFSM = require('mu-ffsm');
 
 Create language/machine.	
 

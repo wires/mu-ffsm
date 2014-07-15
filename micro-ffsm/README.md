@@ -10,22 +10,25 @@ Import
 
 Create language/machine.	
 
-	// internal state is an Array
-	var Talker = FFSM({
-		0:    function() { return []; }, // TODO allow const
-		talk: function(say, what) { say.push(what); return say; },
-		1:    function(say, sep) { return say.join(sep || ' '); }
-	});
-	
+```js
+// internal state is an Array
+var Talker = FFSM({
+	0:    function() { return []; }, // TODO allow const
+	talk: function(say, what) { say.push(what); return say; },
+	1:    function(say, sep) { return say.join(sep || ' '); }
+});
+```
+
 Construct sentences/instances:
 
-	var cowboyGreeting = Talker()
-		.talk('howdy')
-		.talk('cowboy');
-	
-	// make dramatic
-	console.log(cowboyGreeting(', ...'));
-	
+```js
+var cowboyGreeting = Talker()
+	.talk('howdy')
+	.talk('cowboy');
+
+// make dramatic
+console.log(cowboyGreeting(', ...'));
+```
 
 ## Idea
 
@@ -42,24 +45,29 @@ name all the transition functions however we like.
 
 Then
 
+```js
 	var M = FFSM({
 		0: function(i)    { return /* initial state */; } // entry function
 		a: function(s, t) { return /* new state     */; } // transition 'a'
 		b: function(s, t) { return /* new state     */; } // transition 'b'
 		1: function(s, x) { return /* final value   */; } // exit function
 	});
+```
 
 Now
 
+```js
 	var i = M(entry)	// x : S <- 0(entry)
 		.a(trigger_0)	// y : S <- a(x, trigger_0)
 		.b(trigger_1)	// z : S <- b(y, trigger_1)
 		.a(trigger_2);  // i : S <- a(z, trigger_2)
+```
 
 Finally
 
+```js
 	var y = i(x);		// y <- 1(i, x)
-
+```
 
 So we have
 
